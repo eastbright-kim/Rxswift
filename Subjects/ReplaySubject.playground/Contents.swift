@@ -9,7 +9,10 @@ let bag = DisposeBag()
 
 let subject = ReplaySubject<Int>.create(bufferSize: 4)
 
-(1...10).forEach{subject.onNext($0)}
+subject.onNext(1)
+subject.onNext(2)
+subject.onNext(3)
+subject.onNext(4)
 
 subject.subscribe{
     print("first \($0)")
@@ -32,12 +35,13 @@ subject.subscribe{
 (11...14).forEach{subject.onNext($0)}
 
 //이전 구독자들한테 있던 데이터 모두 지워지고 하나씩 전달되고, 이후 구독자에게는 모아뒀다가 한꺼번에 전달
-subject.onCompleted()
+//subject.onCompleted()
 
 //종료 여부와 상관없이 *새로운 구독자는* 버퍼에 있는 가장 최신 데이터들과 onCompleted전달됨. 이전 구독자는 onCompleted 실행으로 새로운 이벤트 전달 못받음. onCompleted는 버퍼 크기와 상관 없음
 subject.subscribe{
     print("third \($0)")
 }
+.disposed(by: bag)
 
 //onComplete이후의 이벤트는 버퍼에 저장 안됨
 subject.onNext(18)
@@ -46,3 +50,4 @@ subject.onNext(18)
 subject.subscribe{
     print("fourth \($0)")
 }
+.disposed(by: bag)

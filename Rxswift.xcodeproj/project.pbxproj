@@ -57,6 +57,10 @@
 		DBB1F79026A83CFD00507A97 /* window.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = window.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DBB1F79126A876C800507A97 /* groupBy.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = groupBy.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DBB1F79326A89D2D00507A97 /* startWith.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = startWith.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DBE501E326AA68B1009D4F66 /* amb.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = amb.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DBE501E526AA6A97009D4F66 /* interval operator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "interval operator.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DBE501E626AA8337009D4F66 /* timer.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = timer.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DBE501E726AA8506009D4F66 /* timeout.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = timeout.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DBE80AD526A5466A0012187C /* Rxswift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rxswift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE80AD826A5466A0012187C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBE80ADA26A5466A0012187C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,7 @@
 		DBE80AE426A5466A0012187C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBE80AE626A5466A0012187C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBE80AED26A546F30012187C /* PublishSubject.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PublishSubject.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DBE92FED26AADDA000523E0D /* Delay.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Delay.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		E7F842E71F1F45C348601FA9 /* Pods_Rxswift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rxswift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -152,9 +157,30 @@
 			path = "Combining Operators";
 			sourceTree = "<group>";
 		};
+		DBE501E226AA689A009D4F66 /* Conditional Operators */ = {
+			isa = PBXGroup;
+			children = (
+				DBE501E326AA68B1009D4F66 /* amb.playground */,
+			);
+			path = "Conditional Operators";
+			sourceTree = "<group>";
+		};
+		DBE501E426AA6A86009D4F66 /* Timebased Operators */ = {
+			isa = PBXGroup;
+			children = (
+				DBE501E526AA6A97009D4F66 /* interval operator.playground */,
+				DBE501E626AA8337009D4F66 /* timer.playground */,
+				DBE501E726AA8506009D4F66 /* timeout.playground */,
+				DBE92FED26AADDA000523E0D /* Delay.playground */,
+			);
+			path = "Timebased Operators";
+			sourceTree = "<group>";
+		};
 		DBE80ACC26A5466A0012187C = {
 			isa = PBXGroup;
 			children = (
+				DBE501E426AA6A86009D4F66 /* Timebased Operators */,
+				DBE501E226AA689A009D4F66 /* Conditional Operators */,
 				DBB1F79226A89D1300507A97 /* Combining Operators */,
 				DB65171326A7EB6F00169621 /* Transforming Operators */,
 				DB79870F26A5B175006F443A /* Filtering Operators */,
